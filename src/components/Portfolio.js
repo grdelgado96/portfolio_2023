@@ -4,7 +4,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActions, Grid, IconButton } from "@mui/material";
-import myimage from "../assets/Roronoa Zoro with swords   One Piece HD desktop wallpaper.jpg";
 import Genia from "../assets/Projects/GENIA.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CodeIcon from "@mui/icons-material/Code";
