@@ -11,6 +11,7 @@ import {
   List,
   ListItem,
   ListItemButton,
+  Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import PropTypes from "prop-types";
@@ -76,6 +77,7 @@ const Navbar = (props) => {
           >
             <MenuIcon />
           </IconButton>
+         
           <Typography
             variant="h6"
             component="div"
@@ -103,17 +105,19 @@ const Navbar = (props) => {
             }}
           >
             {navItems.map((item) => (
-              <Link
-                key={`link-${item.text}`}
-                activeClass="active"
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={item.offset}
-                duration={500}
-              >
-                {item.text}
-              </Link>
+              <Button variant="text" size="medium" sx={{ color: "white" }}>
+                <Link
+                  key={`link-${item.text}`}
+                  activeClass="active"
+                  to={item.to}
+                  spy={true}
+                  smooth={true}
+                  offset={item.offset}
+                  duration={500}
+                >
+                  {item.text}
+                </Link>
+              </Button>
             ))}
           </Box>
         </Toolbar>

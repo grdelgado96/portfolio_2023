@@ -16,17 +16,17 @@ import ServerlessLogo from "../assets/Logos/Serverless.png";
 import S3Logo from "../assets/Logos/S3.png";
 
 const techs = [
-  { name: "HTML", image: HTMLLogo },
-  { name: "CSS", image: CSSLogo },
-  { name: "JavaScript", image: JavaScriptLogo },
-  { name: "TypeScript", image: TypeScriptLogo },
-  { name: "React", image: ReactLogo },
-  { name: "Next", image: NextLogo },
-  { name: "Node.js", image: NodeLogo },
-  { name: "Material UI", image: MaterialLogo },
-  { name: "Git", image: GitLogo },
-  { name: "Serverless Framework", image: ServerlessLogo },
-  { name: "AWS S3", image: S3Logo },
+  { name: "HTML", image: HTMLLogo , color:'rgba(228,77,38,255)'},
+  { name: "CSS", image: CSSLogo, color:'rgba(31,98,174,255)' },
+  { name: "JavaScript", image: JavaScriptLogo, color: 'rgba(240,219,79,255)'},
+  { name: "TypeScript", image: TypeScriptLogo, color:'rgba(0,0,0,255)' },
+  { name: "React", image: ReactLogo, color:'rgba(97,218,251,255)' },
+  { name: "Next", image: NextLogo, color:'rgba(0,0,0,255)' },
+  { name: "Node.js", image: NodeLogo, color:'rgba(93,172,70,255)' },
+  { name: "Material UI", image: MaterialLogo, color:'rgba(0,127,255,255)' },
+  { name: "Git", image: GitLogo, color:'rgba(241,98,88,255)' },
+  { name: "Serverless Framework", image: ServerlessLogo, color:'rgba(242,109,97,255)' },
+  { name: "AWS S3", image: S3Logo, color:'rgba(225,83,67,255)' },
 ];
 
 const Experience = () => {
@@ -47,13 +47,13 @@ const Experience = () => {
     <div
       id="experience"
       style={{
-        minHeight: "100vh",
+        minHeight: "70vh",
         maxWidth: "1000px",
         margin: "0 auto",
         padding: "16px",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-start",
       }}
     >
       <Grid
@@ -94,6 +94,7 @@ const Experience = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  boxShadow: `2px 2px 8px ${tech.color}`,
                 }}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -101,7 +102,7 @@ const Experience = () => {
                 <Avatar
                   alt={tech.name}
                   src={tech.image}
-                  sx={{ width: 80, height: 80 }}
+                  sx={{ width: 80, height: 80, marginTop:'4px' }}
                   variant="square"
                 />
                 <CardContent>

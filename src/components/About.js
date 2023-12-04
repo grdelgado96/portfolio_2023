@@ -20,13 +20,13 @@ const About = () => {
 
   return (
     <div style={{
-      minHeight: "100vh",
+      minHeight: "50vh",
       maxWidth: "1000px",
       margin: "0 auto", 
       padding: "16px",
       display: "flex", 
       justifyContent: "center",
-      alignItems: "center", 
+      alignItems: "flex-start", 
     }} id="about" >
       <Grid
         container

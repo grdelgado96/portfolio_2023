@@ -11,7 +11,7 @@ const Home = () => {
     alignItems: "center",
     justifyContent: "center",
     padding: "16px",
-    marginTop:'6px'
+    marginTop:'10px'
    // marginLeft: "50px",
   };
   const contentContainerStyle = {

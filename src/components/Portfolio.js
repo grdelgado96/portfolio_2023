@@ -8,13 +8,18 @@ import myimage from "../assets/Roronoa Zoro with swords   One Piece HD desktop w
 import Genia from "../assets/Projects/GENIA.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CodeIcon from "@mui/icons-material/Code";
+import FoodOrder from '../assets/Projects/FoodOrder.png'
+import ReduxCart from '../assets/Projects/ReduxCart.png'
+import Calculator from '../assets/Projects/InvestmentCalculator.png'
+import Moviefetch from '../assets/Projects/MovieFetch.png'
+import ReactRouter from '../assets/Projects/ReactRouter.png'
 const projects = [
-  { name: "Chatbot Dashboard", image: Genia },
-  { name: "project2", image: myimage },
-  { name: "project3", image: myimage },
-  { name: "project4", image: myimage },
-  { name: "project5", image: myimage },
-  { name: "project6", image: myimage },
+  { name: "Chatbot Dashboard", image: Genia, link:'http://chatbot-demo-bucket.s3-website.eu-central-1.amazonaws.com' },
+  { name: "Food Order App", image: FoodOrder, link:'https://foodorder-app-react.netlify.app'},
+  { name: "Redux Cart", image: ReduxCart, link:'https://redux-cart-react.netlify.app'},
+  { name: "Investment Calculator",image: Calculator, link:'https://investmentcalculator-react.netlify.app'},
+  { name: "Movie Fetch", image: Moviefetch, link:'https://fetch-movies-react.netlify.app'},
+  { name: "React Router Example", image:ReactRouter, link:'https://react-router-simple-example.netlify.app'},
 ];
 
 const Portfolio = () => {
@@ -38,13 +43,13 @@ const Portfolio = () => {
     <div
       id="portfolio"
       style={{
-        minHeight: "100vh",
+        minHeight: "70vh",
         maxWidth: "1000px",
         margin: "0 auto",
         padding: "16px",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-start",
       }}
     >
       <Grid container spacing={2} direction={"column"} justifyContent="center">
@@ -77,6 +82,7 @@ const Portfolio = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  boxShadow: '0 0 10px rgba(0, 0, 0, 0.4)',
                 }}
               >
                 <div style={containerStyle}>
@@ -105,7 +111,7 @@ const Portfolio = () => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <IconButton>
+                  <IconButton href={project.link} target="_blank" rel="noopener noreferrer">
                     <VisibilityIcon />
                     <Typography variant="body2">Demo</Typography>
                   </IconButton>
