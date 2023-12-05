@@ -7,18 +7,54 @@ import { CardActions, Grid, IconButton } from "@mui/material";
 import Genia from "../assets/Projects/GENIA.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CodeIcon from "@mui/icons-material/Code";
-import FoodOrder from '../assets/Projects/FoodOrder.png'
-import ReduxCart from '../assets/Projects/ReduxCart.png'
-import Calculator from '../assets/Projects/InvestmentCalculator.png'
-import Moviefetch from '../assets/Projects/MovieFetch.png'
-import ReactRouter from '../assets/Projects/ReactRouter.png'
+import FoodOrder from "../assets/Projects/FoodOrder.png";
+import ReduxCart from "../assets/Projects/ReduxCart.png";
+import Calculator from "../assets/Projects/InvestmentCalculator.png";
+import Moviefetch from "../assets/Projects/MovieFetch.png";
+import ReactRouter from "../assets/Projects/ReactRouter.png";
+import Events from "../assets/Projects/Events.png";
+import EventSite from "../assets/Projects/EventSite.png";
 const projects = [
-  { name: "Chatbot Dashboard", image: Genia, link:'http://chatbot-demo-bucket.s3-website.eu-central-1.amazonaws.com' },
-  { name: "Food Order App", image: FoodOrder, link:'https://foodorder-app-react.netlify.app'},
-  { name: "Redux Cart", image: ReduxCart, link:'https://redux-cart-react.netlify.app'},
-  { name: "Investment Calculator",image: Calculator, link:'https://investmentcalculator-react.netlify.app'},
-  { name: "Movie Fetch", image: Moviefetch, link:'https://fetch-movies-react.netlify.app'},
-  { name: "React Router Example", image:ReactRouter, link:'https://react-router-simple-example.netlify.app'},
+  {
+    name: "Chatbot Dashboard",
+    image: Genia,
+    link: "http://chatbot-demo-bucket.s3-website.eu-central-1.amazonaws.com",
+  },
+  {
+    name: "Food Order App",
+    image: FoodOrder,
+    link: "https://foodorder-app-react.netlify.app",
+  },
+  {
+    name: "Events",
+    image: Events,
+    link: "https://events-react-app1.netlify.app",
+  },
+  {
+    name: "Events Site",
+    image: EventSite,
+    link: "https://events-site-react.netlify.app",
+  },
+  {
+    name: "Redux Cart",
+    image: ReduxCart,
+    link: "https://redux-cart-react.netlify.app",
+  },
+  {
+    name: "Investment Calculator",
+    image: Calculator,
+    link: "https://investmentcalculator-react.netlify.app",
+  },
+  {
+    name: "Movie Fetch",
+    image: Moviefetch,
+    link: "https://fetch-movies-react.netlify.app",
+  },
+  {
+    name: "React Router Example",
+    image: ReactRouter,
+    link: "https://react-router-simple-example.netlify.app",
+  },
 ];
 
 const Portfolio = () => {
@@ -81,7 +117,7 @@ const Portfolio = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  boxShadow: '0 0 10px rgba(0, 0, 0, 0.4)',
+                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.4)",
                 }}
               >
                 <div style={containerStyle}>
@@ -110,7 +146,11 @@ const Portfolio = () => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <IconButton href={project.link} target="_blank" rel="noopener noreferrer">
+                  <IconButton
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <VisibilityIcon />
                     <Typography variant="body2">Demo</Typography>
                   </IconButton>

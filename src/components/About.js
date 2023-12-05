@@ -5,7 +5,7 @@ const About = () => {
  
 
   const aboutText =
-    "A goal-oriented entry-level frontend developer with knowledge of HTML, CSS, Javascript and React seeking to use technical proficiency and creativity to develop modern web applications, engage user experiences, and advance professionally. Practical experience with Next.js, Git, GitHub, GitHub Actions, and basic knowledge of Serverless Framework and AWS S3 Bucket. Looking to leverage project collaboration capabilities to produce applications that exceed user expectations.";
+    "A goal-oriented developer with knowledge of Frontend technology seeking to use technical proficiency and creativity to develop modern web applications, engage user experiences and advance professionally. Practical experience with React.js, Next.js, Git, GitHub, GitHub Actions, and basic knowledge of Serverless Framework and AWS S3 Bucket. Looking to leverage project collaboration capabilities to produce applications that exceed user expectations.";
 
   const softSkills = [
     "• Analitical and Logical Thinking",
