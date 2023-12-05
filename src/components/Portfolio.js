@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActions, Grid, IconButton } from "@mui/material";
 import Genia from "../assets/Projects/GENIA.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import CodeIcon from "@mui/icons-material/Code";
+//import CodeIcon from "@mui/icons-material/Code";
 import FoodOrder from "../assets/Projects/FoodOrder.png";
 import ReduxCart from "../assets/Projects/ReduxCart.png";
 import Calculator from "../assets/Projects/InvestmentCalculator.png";
