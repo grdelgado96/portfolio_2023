@@ -154,10 +154,10 @@ const Portfolio = () => {
                     <VisibilityIcon />
                     <Typography variant="body2">Demo</Typography>
                   </IconButton>
-                  <IconButton>
+                  {/* <IconButton> 
                     <CodeIcon />
                     <Typography variant="body2">Code</Typography>
-                  </IconButton>
+                  </IconButton> */}
                 </CardActions>
               </Card>
             </Grid>
