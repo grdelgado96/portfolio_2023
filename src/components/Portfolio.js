@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import { CardActions, Grid, IconButton } from "@mui/material";
 import Genia from "../assets/Projects/GENIA.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-//import CodeIcon from "@mui/icons-material/Code";
 import FoodOrder from "../assets/Projects/FoodOrder.png";
 import ReduxCart from "../assets/Projects/ReduxCart.png";
 import Calculator from "../assets/Projects/InvestmentCalculator.png";
@@ -14,6 +13,7 @@ import Moviefetch from "../assets/Projects/MovieFetch.png";
 import ReactRouter from "../assets/Projects/ReactRouter.png";
 import Events from "../assets/Projects/Events.png";
 import EventSite from "../assets/Projects/EventSite.png";
+import CountdownGame from "../assets/Projects/CountdownGame.png";
 const projects = [
   {
     name: "Chatbot Dashboard",
@@ -34,6 +34,11 @@ const projects = [
     name: "Events Site",
     image: EventSite,
     link: "https://events-site-react.netlify.app",
+  },
+  {
+    name: "Countdown Game",
+    image: CountdownGame,
+    link: "https://countdown-game-react.netlify.app",
   },
   {
     name: "Redux Cart",
