@@ -73,10 +73,7 @@ const Portfolio = () => {
     setHovered(null);
   };
 
-  const containerStyle = {
-    borderRadius: 16,
-    overflow: "hidden",
-  };
+
   return (
     <div
       id="portfolio"
