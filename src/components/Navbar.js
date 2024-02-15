@@ -41,7 +41,7 @@ const Navbar = (props) => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.text} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton key={item.text} sx={{ textAlign: "center" }}>
               <Link
                 key={`link-${item.text}`}
                 activeClass="active"
@@ -66,7 +66,7 @@ const Navbar = (props) => {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav" sx={{ background: "black" }}>
+      <AppBar component="nav" sx={{ background: "rgba(0,0,0,0.8)" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"

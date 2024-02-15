@@ -1,0 +1,36 @@
+.social-buttons {
+    position: fixed;
+    bottom: 400px;
+    left: 20px;
+    z-index: 1000;
+  }
+  
+  .social-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-button i {
+    font-size: 20px;
+  }
+  
+  .social-button:hover {
+    background-color: #555;
+  }
+  
+  .linkedin {
+    background-color: #0077B5;
+  }
+  
+  .github {
+    background-color: #333;
+  }

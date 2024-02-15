@@ -72,9 +72,7 @@ const Portfolio = () => {
   const handleMouseLeave = () => {
     setHovered(null);
   };
-  const textStyle = {
-    color: "white",
-  };
+
   const containerStyle = {
     borderRadius: 16,
     overflow: "hidden",
@@ -83,7 +81,7 @@ const Portfolio = () => {
     <div
       id="portfolio"
       style={{
-        minHeight: "70vh",
+        minHeight: "130vh",
         maxWidth: "1000px",
         margin: "0 auto",
         padding: "16px",
@@ -92,12 +90,10 @@ const Portfolio = () => {
         alignItems: "flex-start",
       }}
     >
-      <Grid container spacing={2} direction={"column"} justifyContent="center">
+      <Grid container spacing={4} direction={"column"} justifyContent="center">
         <Grid item>
-          <Typography variant="h2" style={textStyle}>
-            Portfolio:
-          </Typography>
-          <Typography gutterBottom variant="body1" style={textStyle}>
+          <Typography variant="h2">Portfolio:</Typography>
+          <Typography gutterBottom variant="body1">
             Check out some of my work.
           </Typography>
         </Grid>
@@ -106,47 +102,43 @@ const Portfolio = () => {
           xs={12}
           container
           direction="row"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          rowSpacing={3}
-          columnSpacing={3}
+          justifyContent="center"
+          alignItems="center"
+          rowSpacing={5}
+          columnSpacing={4}
         >
           {projects.map((project, index) => (
-            <Grid item key={project.name}>
+            <Grid item key={project.name} >
               <Card
                 sx={{
-                  width: 290,
+                  width: 300,
                   height: 300,
-                  backgroundColor: "transparent",
-                  borderRadius: 5,
+                  backgroundColor: "rgba(0,0,0,0.2)",
+                  //borderRadius: 5,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.4)",
                 }}
               >
-                <div style={containerStyle}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    width="300"
-                    image={project.image}
-                    alt={project.name}
-                    sx={{
-                      transition: "transform 0.3s",
-                      transform: `scale(${hovered === index ? 1.1 : 1})`,
-                    }}
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                </div>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  width="300"
+                  borderRadius="16"
+                  overflow="hidden"
+                  image={project.image}
+                  alt={project.name}
+                  sx={{
+                    transition: "transform 0.3s",
+                    transform: `scale(${hovered === index ? 1.1 : 1})`,
+                  }}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                />
+
                 <CardContent>
-                  <Typography
-                    style={textStyle}
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                  >
+                  <Typography gutterBottom variant="h5" component="div">
                     {project.name}
                   </Typography>
                 </CardContent>
