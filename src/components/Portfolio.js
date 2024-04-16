@@ -62,6 +62,104 @@ const projects = [
   },
 ];
 
+// const Portfolio = () => {
+//   const [hovered, setHovered] = React.useState(null);
+
+//   const handleMouseEnter = (index) => {
+//     setHovered(index);
+//   };
+
+//   const handleMouseLeave = () => {
+//     setHovered(null);
+//   };
+
+
+//   return (
+//     <div
+//       id="portfolio"
+//       style={{
+//         minHeight: "130vh",
+//         maxWidth: "1000px",
+//         margin: "0 auto",
+//         padding: "16px",
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "flex-start",
+//       }}
+//     >
+//       <Grid container spacing={4} direction={"column"} justifyContent="center">
+//         <Grid item>
+//           <Typography variant="h3">Portfolio:</Typography>
+//           <Typography gutterBottom variant="body1">
+//             Check out some of my work.
+//           </Typography>
+//         </Grid>
+//         <Grid
+//           item
+//           xs={12}
+//           container
+//           direction="row"
+//           justifyContent="center"
+//           alignItems="center"
+//           rowSpacing={5}
+//           columnSpacing={4}
+//         >
+//           {projects.map((project, index) => (
+//             <Grid item key={project.name} >
+//               <Card
+//                 sx={{
+//                   width: 300,
+//                   height: 300,
+//                   backgroundColor: "rgba(0,0,0,0.2)",
+//                   display: "flex",
+//                   flexDirection: "column",
+//                   alignItems: "center",
+//                   boxShadow: "0 0 10px rgba(0, 0, 0, 0.4)",
+//                 }}
+//               >
+//                 <CardMedia
+//                   component="img"
+//                   height="140"
+//                   width="300"
+//                   borderRadius="16"
+//                   overflow="hidden"
+//                   image={project.image}
+//                   alt={project.name}
+//                   sx={{
+//                     transition: "transform 0.3s",
+//                     transform: `scale(${hovered === index ? 1.1 : 1})`,
+//                   }}
+//                   onMouseEnter={() => handleMouseEnter(index)}
+//                   onMouseLeave={handleMouseLeave}
+//                 />
+
+//                 <CardContent>
+//                   <Typography gutterBottom variant="h5" component="div">
+//                     {project.name}
+//                   </Typography>
+//                 </CardContent>
+//                 <CardActions>
+//                   <IconButton
+//                     href={project.link}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                   >
+//                     <VisibilityIcon />
+//                     <Typography variant="body2">Demo</Typography>
+//                   </IconButton>
+
+//                 </CardActions>
+//               </Card>
+//             </Grid>
+//           ))}
+//         </Grid>
+//       </Grid>
+//     </div>
+//   );
+// };
+
+// export default Portfolio;
+
 const Portfolio = () => {
   const [hovered, setHovered] = React.useState(null);
 
@@ -73,85 +171,39 @@ const Portfolio = () => {
     setHovered(null);
   };
 
-
   return (
-    <div
-      id="portfolio"
-      style={{
-        minHeight: "130vh",
-        maxWidth: "1000px",
-        margin: "0 auto",
-        padding: "16px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-      }}
-    >
-      <Grid container spacing={4} direction={"column"} justifyContent="center">
-        <Grid item>
-          <Typography variant="h2">Portfolio:</Typography>
-          <Typography gutterBottom variant="body1">
-            Check out some of my work.
-          </Typography>
+    <div id="portfolio" style={{
+      minHeight: "100vh", padding: "50px"
+    }}>
+      <Grid container spacing={4} justifyContent="center">
+        <Grid item xs={12}>
+          <Typography variant="h2" align="center" gutterBottom>Portfolio</Typography>
+          <Typography variant="body1" align="center" gutterBottom>Check out some of my work.</Typography>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          rowSpacing={5}
-          columnSpacing={4}
-        >
+        <Grid item container spacing={4} justifyContent="center" width='80%'>
           {projects.map((project, index) => (
-            <Grid item key={project.name} >
+            <Grid item key={project.name} xs={12} sm={6} md={4}>
               <Card
-                sx={{
-                  width: 300,
-                  height: 300,
-                  backgroundColor: "rgba(0,0,0,0.2)",
-                  //borderRadius: 5,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.4)",
-                }}
+                sx={{ backgroundColor: "#ffffff", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
               >
                 <CardMedia
                   component="img"
-                  height="140"
-                  width="300"
-                  borderRadius="16"
-                  overflow="hidden"
+                  height="200"
                   image={project.image}
                   alt={project.name}
-                  sx={{
-                    transition: "transform 0.3s",
-                    transform: `scale(${hovered === index ? 1.1 : 1})`,
-                  }}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
+                  sx={{ transition: "transform 0.3s", transform: `scale(${hovered === index ? 1.05 : 1})` }}
                 />
-
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {project.name}
-                  </Typography>
+                  <Typography variant="h5" gutterBottom>{project.name}</Typography>
+                  <Typography variant="body2" color="textSecondary" gutterBottom>{project.description}</Typography>
                 </CardContent>
-                <CardActions>
-                  <IconButton
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <CardActions style={{ justifyContent: "center" }}>
+                  <IconButton href={project.link} target="_blank" rel="noopener noreferrer">
                     <VisibilityIcon />
                     <Typography variant="body2">Demo</Typography>
                   </IconButton>
-                  {/* <IconButton> 
-                    <CodeIcon />
-                    <Typography variant="body2">Code</Typography>
-                  </IconButton> */}
                 </CardActions>
               </Card>
             </Grid>

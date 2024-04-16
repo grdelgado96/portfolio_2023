@@ -38,7 +38,7 @@ const About = () => {
         alignItems={"center"}
       >
         <Grid item xs={12} sm={10} container direction={"column"} wrap="nowrap">
-          <Typography variant="h2">About:</Typography>
+          <Typography variant="h3">About:</Typography>
           <Typography variant="body1" style={{ marginBottom: "16px" }}>
             {aboutText}
           </Typography>

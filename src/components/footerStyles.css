@@ -3,11 +3,11 @@
 .footer {
   background-color: rgba(0,0,0,0.2); /* Color de fondo del pie de página */
   color: #000000; /* Color del texto */
-  padding: 20px; /* Espaciado interno */
+  padding: 10px; /* Espaciado interno */
   text-align: center; /* Centra el texto */
 }
 
 .copyright {
-  margin-top: 10px; /* Espacio superior para separar del contenido anterior */
+  margin-top: 5px; /* Espacio superior para separar del contenido anterior */
 }
 

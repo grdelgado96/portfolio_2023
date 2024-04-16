@@ -35,7 +35,7 @@ const Home = () => {
           <div style={contentContainerStyle}>
             <Typography variant="h3">I'm Giselle Rodriguez</Typography>
             <Divider />
-            <Typography variant="p">
+            <Typography variant="body1">
               I'm a Florida based Front End Developer
             </Typography>
             <Button
